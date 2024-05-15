@@ -98,8 +98,7 @@ class PrintCommand(Command):
     usage = "print <VALOR>"
 
     def __init__(self):
-        description = "command print - outputs the value given"
-        super().__init__("print", description)
+        super().__init__(self.name, self.description)
 
     def execute(self, args):
         if not args or len(args) == 0:
